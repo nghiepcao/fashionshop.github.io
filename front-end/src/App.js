@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import jwt_decode from 'jwt-decode';
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
@@ -17,11 +18,14 @@ import Verify from './components/verify';
 import store from './store';
 import setAuthToken from './utils/setAuthToken';
 
+
+ =======
 import Header from './components/admin_components/Header';
 import Aside from './components/admin_components/Aside';
 import Footer from './components/admin_components/Footer';
 import Dashboard from './components/admin_components/header_components/wrapper_components/Dashboard';
 import Catalog from './components/admin_components/header_components/wrapper_components/Catalog';
+
 
 
 
@@ -49,7 +53,7 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
-class App extends Component {
+class App extends React.Component {
   // state = {
   //   courses: [],
   // };
@@ -71,6 +75,36 @@ class App extends Component {
       //     <p>{this.state.courses}</p>
       //   </header>
       // </div>
+
+      <Provider store={store}>
+        <Router>
+        <div>
+          
+            <div>
+            <Link to={"/login"} className="nav-link">
+                      Login
+                    </Link>
+            </div>
+            <br />
+            {/* <h2>Welcome to Main page</h2> <br /> */}
+            {/* 
+            //token in locastrorage
+            //store
+            //call api again => send current user in redux => verify => update redux */}
+            <Switch>
+              <Route exact path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              <PrivateRoute path="/userlist" component={UserList} />
+              <Route path="/user/edit/:id" component={Edit} />
+              <Route path="/user/delete/:id" component={Delete} />
+              <PrivateRoute path="/dashboard" component={Dashboard} />
+              <Route path="/verify" component={Verify} />
+              <Route path="/forgotpassword" component={Forgot} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+=======
       // <Provider store={store}>
       //   <Router>
       //     <div className="container">
@@ -141,6 +175,7 @@ class App extends Component {
           <Footer />
         </section>
       </section>
+
     );
   }
 }
