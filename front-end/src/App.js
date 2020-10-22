@@ -104,7 +104,7 @@ class App extends React.Component {
           </div>
         </Router>
       </Provider>
-=======
+
       // <Provider store={store}>
       //   <Router>
       //     <div className="container">
