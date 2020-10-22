@@ -53,7 +53,7 @@ class Wrapper extends Component {
                   <div className="col-md-8 market-update-left">
                     <h4>Orders</h4>
                     <h3>1,500</h3>
-                    <p>Other hand, we denounce</p>
+                    <p>Other hand, we denounce ???</p>
                   </div>
                   <div className="clearfix"> </div>
                 </div>
