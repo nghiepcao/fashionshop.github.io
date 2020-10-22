@@ -66,7 +66,7 @@ class Wrapper extends Component {
                     <div className="agileinfo-grap">
                       <div className="agileits-box">
                         <header className="agileits-box-header clearfix">
-                          <h3>Visitor Statistics</h3>
+                          <h3>Visaitor Statistics</h3>
                             <div className="toolbar">
                               
                               
