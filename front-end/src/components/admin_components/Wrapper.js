@@ -60,7 +60,7 @@ class Wrapper extends Component {
               </div>
               <div className="clearfix"> </div>
             </div>	
-            <div className="row">
+            {/* <div className="row">
               <div className="panel-body">
                 <div className="col-md-12 w3ls-graph">
                     <div className="agileinfo-grap">
@@ -79,7 +79,7 @@ class Wrapper extends Component {
                     </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="agil-info-calendar">
             <div className="col-md-6 agile-calendar">
               <div className="calendar-widget">
