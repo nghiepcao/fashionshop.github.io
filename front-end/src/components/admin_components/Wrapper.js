@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import Dashboard from './header_components/wrapper_components/Dashboard';
 
-class Wrapper extends Component {
+// class Wrapper extends Component {
+
 
   render() {
     return (
@@ -199,5 +201,13 @@ class Wrapper extends Component {
     );
   }
 }
+=======
+//   render() {
+//     return (
+        
+//     );
+//   }
+// }
 
-export default Wrapper;
+
+// export default Wrapper;
