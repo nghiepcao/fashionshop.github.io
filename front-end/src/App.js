@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import { logoutUser, setCurrentUser } from './Actions/authActions';
-import Dashboard from './components/dashboard/dashboard';
 import Delete from './components/delete.component';
 import Edit from './components/edit.component';
 import Forgot from './components/forgotpassword';
@@ -20,8 +19,10 @@ import setAuthToken from './utils/setAuthToken';
 
 import Header from './components/admin_components/Header';
 import Aside from './components/admin_components/Aside';
-import Wrapper from './components/admin_components/Wrapper';
 import Footer from './components/admin_components/Footer';
+import Dashboard from './components/admin_components/header_components/wrapper_components/Dashboard';
+import Catalog from './components/admin_components/header_components/wrapper_components/Catalog';
+
 
 
 // import api from "./utils/API";
@@ -130,7 +131,13 @@ class App extends Component {
         <Header />
         <Aside />
         <section id="main-content">
-          <Wrapper />
+        <section className="wrapper">
+            <Switch>
+              <Route exact path='/' component={Dashboard}></Route>
+              <Route path='/catalog' component={Catalog}></Route>
+              
+            </Switch>
+        </section>
           <Footer />
         </section>
       </section>
